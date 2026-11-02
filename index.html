@@ -2,6 +2,7 @@
 <meta name="theme-color" content="#0a0a0a">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="icon-192.png">
+<link rel="manifest" href="manifest.json">
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Rutina"><style>html{color-scheme:dark;background:#07090e;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style></head><body><title>Rutina Progresiva</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="theme-color" content="#07090e">
@@ -9,11 +10,7 @@
 <style>:root{--bg:#07090e;--bg2:#0d1119;--card:#0f141d;--line:#1d2533;--line2:#2a3447;--fg:#e6ebf5;--mute:#8693ab;--dim:#566178;--ac:#3da5ff;--ac-s:rgba(61,165,255,.14);--ok:#2cf5a8;--warn:#ffb020;color-scheme:dark;--f-d:'Bebas Neue','Impact',sans-serif;--f-b:'DM Sans',system-ui,sans-serif;--f-m:'DM Mono',ui-monospace,monospace}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{background:var(--bg)}
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
-  }
-</script>
+
 
 body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 var(--f-b);padding-block:0 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));background-image:radial-gradient(900px 400px at 50% -120px,var(--ac-s),transparent 70%),linear-gradient(var(--bg),var(--bg));background-repeat:no-repeat}
 #app{max-width:880px;margin:0 auto;min-width:0}
@@ -995,5 +992,10 @@ root=document.getElementById('app');tmEl=document.getElementById('tm');
 var saved=lsGet();if(saved){S.prog=saved.prog||{};S.wt=saved.wt||{};if(saved.week)S.week=saved.week;if(saved.day!=null)S.day=saved.day}
 draw();initCloud();
 })();
+</script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
+  }
 </script>
 </body></html>
